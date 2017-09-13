@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Числа-палиндромы</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="../palindromes.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="head">
+            <h3>Числа-палиндромы</h3>
+            <div class="description">
+                Числами-палиндромами называют числа, которые читаются 
+                одинаково как слева направо, так и справа на лево
+            </div>
+        </div>
+
+        <div class="mode">
+            <div class="mode-row">
+                <div class="col-1">Режим работы:</div>
+                <div class="col-2">
+                    <label for="modeInputSingle">
+                        <input type="radio" name="modeInput" id="modeInputSingle" value="1" checked>
+                        Одно число, следующее за заданным
+                    </label> 
+                    <div class="description">
+                        Вычисление только одного числа-палиндрома, которое больше заданного
+                    </div>   
+                </div>
+
+            </div>
+            <div class="mode-row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <label for="modeInputMultiple">
+                        <input type="radio" name="modeInput" id="modeInputMultiple" value="0">
+                        Несколько чисел, следующих за заданным
+                    </label>
+                    <div class="description">
+                            Вычисление определенного количества чисел-палиндромов, которые больше заданного
+                        </div>   
+                    </div>
+            </div>
+        </div>
+
+        <div class="form-main">
+
+            <div class="form-main-row">
+                <div class="labels">
+                    <label for="startNumber">Начальное число:</label>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="startNumber" id="startNumber">
+                    <input type="button" class="button" id="buttonSearch" value="Найти">
+                </div>
+            </div> 
+
+            <div class="form-main-row unvisible" id="rowNumbersCount">
+                <div class="labels">
+                    <label for="numbersCount" class="col-1">Количество чисел:</label>
+                </div>
+                <div class="inputs">    
+                    <select class="col-2" name="numbersCount" id="numbersCount">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="250">250</option>
+                        <option value="500">500</option>
+                        <option value="750">750</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </div>    
+            </div> 
+        </div>
+
+        <div class="results" id="resultBlock">
+
+        </div>
+
+    </div>
+</body>
+</html>
